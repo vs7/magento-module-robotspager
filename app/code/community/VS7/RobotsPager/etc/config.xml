@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <VS7_RobotsPager>
+            <version>0.1.0</version>
+        </VS7_RobotsPager>
+    </modules>
+    <global>
+        <models>
+            <vs7_robotspager>
+                <class>VS7_RobotsPager_Model</class>
+            </vs7_robotspager>
+        </models>
+        <helpers>
+            <vs7_robotspager>
+                <class>VS7_RobotsPager_Helper</class>
+            </vs7_robotspager>
+        </helpers>
+    </global>
+    <frontend>
+        <events>
+            <core_block_abstract_prepare_layout_before>
+                <observers>
+                    <vs7_robotspager>
+                        <type>singleton</type>
+                        <class>VS7_RobotsPager_Model_Observer</class>
+                        <method>setRobotsPager</method>
+                    </vs7_robotspager>
+                </observers>
+            </core_block_abstract_prepare_layout_before>
+        </events>
+    </frontend>
+</config>
